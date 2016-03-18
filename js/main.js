@@ -1,5 +1,8 @@
+var $html = $('html');
 var $input = $('#color-input');
+var $picker = $('form');
+var $ball = $('.ball');
 
-$('form').on('color', function (e) {
-  e.preventDefault();
+$picker.on('change', function () {
+  $ball.css('background-color', $input.val());
 });
